@@ -5,11 +5,11 @@
       <pre>{{ JSON.stringify(authStore.serverInfo, null, 2) }}</pre>
     </div>
     <div v-if="authStore.isAuthenticated">
-      <p>You are logged in!</p>
+      <p>已登录</p>
       <router-link to="/profile">Go to Profile</router-link>
     </div>
     <div v-else>
-      <p>You are not logged in.</p>
+      <p>未登录</p>
       <router-link to="/login">Login</router-link>
     </div>
   </div>

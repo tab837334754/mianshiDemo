@@ -14,16 +14,22 @@ jobs:
       - name: Setup Node.js # 设置Node.js环境
         uses: actions/setup-node@v2
         with:
-          node-version: '14' # 使用Node.js的版本，根据需要调整
+          node-version: '20' # 使用Node.js的版本，根据需要调整
       
       - name: Install dependencies # 安装依赖
         run: npm install
       
       - name: Build project # 构建项目
         run: npm run build
+
+      - name: Upload dist
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-files
+          path: ./dist
       
       - name: Deploy to GitHub Pages # 部署到GitHub Pages
         uses: peaceiris/actions-gh-pages@v3 # 使用GitHub Pages action
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # 使用GitHub的token进行认证
+          github_token: ${{ secrets.DEPLOY_TOKEN }} # 使用GitHub的token进行认证
           publish_dir: ./dist # 指定构建产物的目录，默认为dist目录

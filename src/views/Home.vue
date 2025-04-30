@@ -1,6 +1,5 @@
 <template>
   <div class="home-container">
-    <!-- <h1>{{ import.meta.env.VITE_APP_NAME }}</h1> -->
     <div v-if="authStore.serverInfo">
       <h2>Server Information</h2>
       <pre>{{ JSON.stringify(authStore.serverInfo, null, 2) }}</pre>

@@ -1,6 +1,6 @@
 <template>
   <div class="login-container">
-    <h1>Login</h1>
+    <h1>登录</h1>
     <form @submit.prevent="handleSubmit">
       <div class="form-group">
         <label for="email">Email</label>
@@ -23,7 +23,7 @@
         />
       </div>
       <button type="submit" :disabled="isLoading">
-        {{ isLoading ? 'Logging in...' : 'Login' }}
+        {{ isLoading ? '登录中...' : '登录' }}
       </button>
       <div v-if="error" class="error-message">
         {{ error }}

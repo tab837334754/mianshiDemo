@@ -1,0 +1,27 @@
+{
+  "name": "my-vue-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:domain1": "VITE_DEPLOY_DOMAIN=dev.178778.xyz vite build",
+    "build:domain2": "VITE_DEPLOY_DOMAIN=dev.domain2.xyz vite build",
+    "deploy:domain1": "npm run build:domain1 && gh-pages -d dist",
+    "deploy:domain2": "npm run build:domain2 && gh-pages -d dist",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "js-cookie": "^3.0.5",
+    "pinia": "^3.0.2",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.2",
+    "vite": "^6.3.1",
+    "vite-plugin-proxy": "^0.5.0"
+  }
+}

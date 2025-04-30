@@ -9,8 +9,8 @@
       <router-link to="/profile">Go to Profile</router-link>
     </div>
     <div v-else>
-      <p>未登录.</p>
-      <router-link to="/login">Login</router-link>
+      <p>您未登录.</p>
+      <router-link to="/login">登录</router-link>
     </div>
   </div>
 </template>

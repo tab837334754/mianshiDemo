@@ -10,7 +10,7 @@
     </div>
     <div v-else>
       <p>您未登录.</p>
-      <router-link to="/login">登录</router-link>
+      <router-link to="/login">去登录</router-link>
     </div>
   </div>
 </template>
